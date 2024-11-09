@@ -3,6 +3,7 @@ import { persistor, store } from './Store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import Home from './Pages/Home';
+import TopBar from './Components/Common/TopBar';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
+          <TopBar />
           <Home />
         </PersistGate>
       </Provider>
