@@ -1,7 +1,9 @@
+import SearchEvents from "./SearchEvents";
+
 const Home = () =>{
     return (
         <div>
-            <p>Home Page</p>
+            <SearchEvents />
         </div>
     )
 }
