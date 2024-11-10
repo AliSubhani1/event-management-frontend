@@ -1,0 +1,34 @@
+import WebsiteLogo from '../../../Assets/png/EventLogo.png'
+import { useNavigate } from 'react-router-dom';
+import { ButtonColor, navbarItems } from '../../../Utils/constants';
+import CustomButton from '../CustomButton';
+
+const MainNavbar = () =>{
+
+    const navigate = useNavigate();
+    return (
+        <div className='mt-6 bg-white pt-6 pb-2 shadow-sm fixed top-0 left-0 flex  justify-between w-full items-center'>
+            <img className='w-[200px]' src={WebsiteLogo} alt="website logo" />
+            <div className='flex gap-8'>
+                <div>
+                    {navbarItems.map((item) => {
+                        return (
+                            <a 
+                                key={item.title} 
+                                href={item.path} 
+                                className={`mr-4 hover:opacity-80 ${window.location.pathname === item.path? 'text-blue-0 underline underline-offset-[12px]' : 'text-gray-0'}`}
+                                onClick={() => navigate(item.path)}
+                            >
+                                {item.title}
+                            </a>
+                        )
+                    })}
+                </div>
+                <div>
+                    <CustomButton className='mr-4' colorClass={ButtonColor.DARK_BLUE} >Sign Up</CustomButton>
+                </div>
+            </div>
+        </div>
+    )
+}
+export default MainNavbar;
