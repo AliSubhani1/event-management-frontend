@@ -7,7 +7,7 @@ const MainNavbar = () =>{
 
     const navigate = useNavigate();
     return (
-        <div className='mt-6 bg-white pt-6 pb-2 shadow-sm fixed top-0 left-0 flex  justify-between w-full items-center'>
+        <div className='bg-white pb-2 shadow-sm flex  justify-between w-full items-center'>
             <img className='w-[200px]' src={WebsiteLogo} alt="website logo" />
             <div className='flex gap-8'>
                 <div>
