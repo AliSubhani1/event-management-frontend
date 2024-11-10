@@ -3,9 +3,9 @@ import { persistor, store } from './Store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './Pages/Home';
 import TopBar from './Components/Common/TopBar';
 import Navbar from './Components/Common/Navbar/index';
+import AppRouter from './Routes/AppRouter';
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <BrowserRouter basename="/">
           <TopBar />
           <Navbar />
-          <Home />
-          </BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
         </PersistGate>
       </Provider>
       </header>
