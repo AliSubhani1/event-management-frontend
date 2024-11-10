@@ -13,6 +13,12 @@ module.exports = {
       blue: {
         0: '#1476d1',
       },
+      gray: {
+        0: '#667085',
+      },
+      yellow: {
+        0: '#FFD13E',
+      }
     }
   },
   plugins: [],
