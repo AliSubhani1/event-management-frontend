@@ -35,7 +35,7 @@ const MobileNavbar = () =>{
             </div>
             ) : (
                 
-                <SlMenu  className="absolute top-0 mt-4 ml-4 size-8 text-white-0" onClick={() => {setIsMenuOpen(true)}}/>
+                <SlMenu  className="absolute top-0 mt-1 sm:mt-4 ml-4 size-8 text-white-0 z-10" onClick={() => {setIsMenuOpen(true)}}/>
             
             )
         }
