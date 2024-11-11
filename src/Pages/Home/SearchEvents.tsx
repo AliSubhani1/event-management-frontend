@@ -34,7 +34,7 @@ const SearchEvents = () => {
   return (
     <>
     <div
-        className={`bg-blue-0 p-6 sm:w-[95vw] mx-auto rounded-md mt-12 transform transition-transform duration-700 ease-in-out ${
+        className={`bg-blue-0 p-6 sm:w-[95vw] mx-auto rounded-md sm:mt-12 transform transition-transform duration-700 ease-in-out ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}
       >
@@ -54,9 +54,9 @@ const SearchEvents = () => {
     </div>
         <div>
           {events.length > 0 ? (
-            <div className='flex gap-8 flex-wrap items-center justify-center'>
+            <div className='flex gap-8 my-8 flex-wrap items-center justify-center'>
               {events.map((event, index) => (
-                <EventContainer eventName={event.title} image={event.images[0]}/>
+                <EventContainer key={index} eventName={event.title} image={event.images[0]}/>
               ))}
             </div>
           ) : (
@@ -70,10 +70,11 @@ const SearchEvents = () => {
                         <h3 className='text-xl font-bold'>No results found</h3>
                         <p className='text-center'>OOPS! We couldn't found any results. Please try again later.</p>
                         
-                    </div>
+              </div>
             ) )
           }          
         </div>
+        <div className="border-t border-gray-0 my-12 opacity-40"></div>
         </>
   );
 };
