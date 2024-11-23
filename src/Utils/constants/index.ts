@@ -10,6 +10,7 @@ export enum ButtonColor {
     ContactUs = '/contact-us',
     SignUp = '/signup',
     Login = '/login',
+    AllEvents = '/all-events',
   }
 
 
