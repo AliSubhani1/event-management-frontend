@@ -6,6 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import TopBar from './Components/Common/TopBar';
 import Navbar from './Components/Common/Navbar/index';
 import AppRouter from './Routes/AppRouter';
+import Footer from './Components/Common/Footer';
+import NewsletterSubscription from './Components/Common/NewsletterSubscription';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <TopBar />
           <Navbar />
           <AppRouter />
+          <NewsletterSubscription />
+          <Footer />
         </BrowserRouter>
         </PersistGate>
       </Provider>
