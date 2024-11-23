@@ -12,7 +12,7 @@ import Marquee from "react-fast-marquee";
 
 const EventPartners = () => {
     return (
-        <div className='w-[90%] mx-auto'>
+        <div className='w-[90%] mx-auto mt-20'>
             <h3 className='font-bold text-xl mb-4'>Top Event Partners</h3>
             <p className='text-md'>Get access to events by best organizers in Europe.</p>
             <Marquee className='my-12'>
