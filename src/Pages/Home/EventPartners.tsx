@@ -15,7 +15,7 @@ const EventPartners = () => {
         <div className='w-[90%] mx-auto mt-20'>
             <h3 className='font-bold text-xl mb-4'>Top Event Partners</h3>
             <p className='text-md'>Get access to events by best organizers in Europe.</p>
-            <Marquee className='my-12'>
+            <Marquee className='my-20'>
                 <img src={Logo1} alt="logo" />
                 <img src={Logo2} alt="logo" />
                 <img src={Logo3} alt="logo" />
