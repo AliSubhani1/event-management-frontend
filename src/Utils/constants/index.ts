@@ -6,7 +6,6 @@ export enum ButtonColor {
 
   export enum Pages {
     Home = '/',
-    About = '/about',
     ContactUs = '/contact-us',
     SignUp = '/signup',
     Login = '/login',
@@ -16,6 +15,5 @@ export enum ButtonColor {
 
   export const navbarItems = [
     {title: 'Home', path: Pages.Home},
-    {title: 'About', path: Pages.About},
     {title: 'Contact Us', path: Pages.ContactUs},
 ]
