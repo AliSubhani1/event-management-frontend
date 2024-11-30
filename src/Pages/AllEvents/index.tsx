@@ -59,6 +59,7 @@ const AllEvents: React.FC = () => {
                 key={index}
                 eventName={event.title}
                 image={event.images[0]}
+                event={event}
               />
             ))}
           </div>
