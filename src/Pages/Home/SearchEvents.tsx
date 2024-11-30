@@ -79,6 +79,7 @@ const SearchEvents = () => {
           <div className="flex gap-8 my-8 flex-wrap items-center justify-center">
             {visibleEvents.map((event, index) => (
               <EventContainer
+                event={event}
                 key={index}
                 eventName={event.title}
                 image={event.images[0]}
