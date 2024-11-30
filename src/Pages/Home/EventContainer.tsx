@@ -1,25 +1,26 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-type EventContainerProps = {
+interface EventContainerProps {
   eventName: string;
   image: string;
-};
+  event: any; // Pass the entire event object to navigate
+}
 
-const EventContainer = ({ eventName, image }: EventContainerProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+const EventContainer: React.FC<EventContainerProps> = ({ eventName, image, event }) => {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const handleEventClick = () => {
+    navigate(`/event-details/${event.id}`, { state: { event } });
+  };
 
   return (
     <div
-      className={`text-center w-[300px] cursor-pointer transform transition-transform duration-700 ease-in-out ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      }`}
+      onClick={handleEventClick}
+      className="cursor-pointer rounded-lg p-4 hover:shadow-lg transition-shadow"
     >
-      <img className="w-[300px] h-[300px] transform transition-transform duration-500 ease-in-out hover:scale-110" src={image} alt="event-image" />
-      <h3>{eventName}</h3>
+      <img src={image} alt={eventName} className="w-full h-40 object-cover rounded-md mb-4" />
+      <h3 className="text-xl font-bold">{eventName}</h3>
     </div>
   );
 };
