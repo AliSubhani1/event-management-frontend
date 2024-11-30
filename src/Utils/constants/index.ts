@@ -10,6 +10,7 @@ export enum ButtonColor {
     SignUp = '/signup',
     Login = '/login',
     AllEvents = '/all-events',
+    EventDetails = '/event-details/:eventId',
   }
 
 
