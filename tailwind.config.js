@@ -29,6 +29,9 @@ module.exports = {
         0: '#D81B39',
         1: '#E33B32',
       },
+      green: {
+        0: '#2E9C3F',
+      },
     }
   },
   plugins: [],
