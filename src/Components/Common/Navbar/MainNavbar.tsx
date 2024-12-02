@@ -1,7 +1,6 @@
 import WebsiteLogo from '../../../Assets/png/EventLogo.png'
 import { useNavigate } from 'react-router-dom';
-import { ButtonColor, navbarItems } from '../../../Utils/constants';
-import CustomButton from '../CustomButton';
+import { navbarItems } from '../../../Utils/constants';
 
 const MainNavbar = () =>{
 
@@ -23,9 +22,6 @@ const MainNavbar = () =>{
                             </a>
                         )
                     })}
-                </div>
-                <div>
-                    <CustomButton className='mr-4' colorClass={ButtonColor.DARK_BLUE} >Sign Up</CustomButton>
                 </div>
             </div>
         </div>
