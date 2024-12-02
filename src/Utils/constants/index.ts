@@ -11,10 +11,13 @@ export enum ButtonColor {
     Login = '/login',
     AllEvents = '/all-events',
     EventDetails = '/event-details/:eventId',
+    ManageEvents = '/manage-events',
   }
-
 
   export const navbarItems = [
     {title: 'Home', path: Pages.Home},
+    {title: 'Manage', path: Pages.ManageEvents},
     {title: 'Contact Us', path: Pages.ContactUs},
 ]
+
+export const BASE_URL = 'http://localhost:3004/'
