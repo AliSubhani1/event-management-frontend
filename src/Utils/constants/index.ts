@@ -20,4 +20,4 @@ export enum ButtonColor {
     {title: 'Contact Us', path: Pages.ContactUs},
 ]
 
-export const BASE_URL = 'http://16.170.65.191/'
+export const BASE_URL = 'https://api.mywebhubtech.store/'
