@@ -3,7 +3,7 @@ import useDebounce from "../../CustomHooks/UseDebounc";
 import SearchImage from "../../Assets/svg/search.svg";
 import EventContainer from "./EventContainer";
 import CustomButton from "../../Components/Common/CustomButton";
-import { ButtonColor } from "../../Utils/constants";
+import { BASE_URL, ButtonColor } from "../../Utils/constants";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../Components/Common/Spinner";
 
@@ -13,6 +13,7 @@ const SearchEvents = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [isVisible, setIsVisible] = useState(false);
   const [events, setEvents] = useState<any[]>([]);
+  const [filteredEvents, setFilteredEvents] = useState<any[]>([]);
   const [visibleEvents, setVisibleEvents] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -23,23 +24,30 @@ const SearchEvents = () => {
   }, []);
 
   useEffect(() => {
-    fetchEvents(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
+    // Fetch events only once
+    fetchEvents();
+  }, []);
 
   useEffect(() => {
-    // Update the visible events when the `events` array changes
-    setVisibleEvents(events.slice(0, 16));
-  }, [events]);
+    // Filter events based on the debounced search term
+    const filtered = events.filter((event) =>
+      event.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+    );
+    setFilteredEvents(filtered);
+  }, [debouncedSearchTerm, events]);
 
-  const fetchEvents = async (query: string) => {
+  useEffect(() => {
+    // Update the visible events when the filtered events change
+    setVisibleEvents(filteredEvents.slice(0, 16));
+  }, [filteredEvents]);
+
+  const fetchEvents = async () => {
     setIsLoading(true); // Start loading
     try {
-      const response = await fetch(
-        `https://dummyjson.com/products/search?q=${query}`
-      );
+      const response = await fetch(`${BASE_URL}events`);
       const data = await response.json();
       console.log("data=", data);
-      setEvents(data.products || []);
+      setEvents(data || []);
     } catch (error) {
       console.error("Error fetching events:", error);
     } finally {
@@ -81,8 +89,6 @@ const SearchEvents = () => {
               <EventContainer
                 event={event}
                 key={index}
-                eventName={event.title}
-                image={event.images[0]}
               />
             ))}
           </div>
