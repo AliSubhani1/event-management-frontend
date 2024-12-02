@@ -4,6 +4,7 @@ import Home from '../Pages/Home';
 import AllEvents from '../Pages/AllEvents';
 import Contact from '../Pages/Contact';
 import EventDetails from '../Pages/EventDetails';
+import ManageEvents from '../Pages/ManageEvents';
 
 const AppRouter = () => (
     <Routes>
@@ -29,6 +30,12 @@ const AppRouter = () => (
         path={Pages.EventDetails}
         element={
             <EventDetails />
+        }
+      />
+      <Route
+        path={Pages.ManageEvents}
+        element={
+            <ManageEvents />
         }
       />
       </Routes>
