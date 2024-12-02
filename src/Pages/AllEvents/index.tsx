@@ -22,7 +22,7 @@ const AllEvents: React.FC = () => {
       setFilteredEvents(events);
     } else {
       const filtered = events.filter((event: any) =>
-        event.title.toLowerCase().includes(searchTerm.toLowerCase())
+        event.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredEvents(filtered);
     }
@@ -55,12 +55,7 @@ const AllEvents: React.FC = () => {
         {filteredEvents.length > 0 ? (
           <div className="flex gap-8 my-8 flex-wrap items-center justify-center">
             {filteredEvents.map((event: any, index: number) => (
-              <EventContainer
-                key={index}
-                eventName={event.title}
-                image={event.images[0]}
-                event={event}
-              />
+              <EventContainer key={index} event={event} />
             ))}
           </div>
         ) : (
