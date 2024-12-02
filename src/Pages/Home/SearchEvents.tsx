@@ -46,7 +46,6 @@ const SearchEvents = () => {
     try {
       const response = await fetch(`${BASE_URL}events`);
       const data = await response.json();
-      console.log("data=", data);
       setEvents(data || []);
     } catch (error) {
       console.error("Error fetching events:", error);

@@ -134,7 +134,7 @@ const ManageEvents = () => {
   
 
   return (
-    <div>
+    <div className="mb-12">
       <div className="w-full flex justify-end mb-6">
         <CustomButton
           className="mr-12 my-8"

@@ -8,6 +8,7 @@ interface EventProps {
     price?: number; // Optional price
     description: string;
     image: string;
+    date: Date;
   };
   onDelete?: (id: string) => void;
   onEdit?: (event: any) => void;
@@ -38,6 +39,7 @@ const EventContainer: React.FC<EventProps> = ({ event, onDelete, onEdit }) => {
       <img src={event.image} alt={event.name} className="w-full h-40 object-cover rounded-md mb-4" />
       <h3 className="text-xl font-bold">{event.name}</h3>
       {event.price && <h3>{`${event.price} EUR`}</h3>}
+      <h3>{new Date(event?.date)?.toLocaleDateString()}</h3>
       <div className="flex gap-2">
         {onEdit && (
           <button
