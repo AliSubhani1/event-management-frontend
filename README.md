@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Website Content: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Entire website is mobile responsive. I have explained the content of all pages below, 
 
-## Available Scripts
+# Home Page: 
 
-In the project directory, you can run:
+- The home page of website contains list of events along with a search option which can be used to search for a specific event. 
+- There is a see all events button which takes you to anothet page where you can see complete list of events. 
+- Then we have a "Why Use Event Booking?" section on home page indicating the benefirts of using this website. 
+- We have a "Top Event Partners" section to display list of event partners in form of a moving image animation. 
+- We have a "Frequently Asked Questions" section where user can read answers to frequently asked questions from previous website users. 
+- We have a "Subscribe to our newsletter" section in the bottom where user can subscribe to our newsletter. 
 
-### `npm start`
+# Event Details Page: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- If a user clicks on any event from the home page it tskes you to an event details page. 
+- User can see the event image, title, description and date on this page. 
+- If user clicks on reserve ticket button it will download the event ticket for the user. User will be able to reserve a slot in the event and pay the amount later on the venue. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Manage Events Page: 
 
-### `npm test`
+- Manage events page will later be only visible to an admin user but for now sir allowed to redcue the scope and just do it on one of the existing pages of website. 
+- Manage events page is currently used for maanging the events where there is an option to add, delete or edit the events currently available on the website. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Contact Us Page: 
 
-### `npm run build`
+- On contact us page we have provided a contact form for user to reach out in case of any issues. 
+- We have a frequently asked questions section here for details. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Events Website
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is an events website built with React.js, Typescript and Tailwind CSS. It shows the events and their details in an elegant and responsive design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository: `git clone https://github.com/AliSubhani1/event-management-frontend.git`
+2. Navigate to the project directory: `cd event-management-frontend`
+3. Install the dependencies: `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Start the development server: `npm start`
+2. Open your browser and visit `http://localhost:3000` to view the website.
 
-## Learn More
+## Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The following dependencies are required for this project:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React.js: A JavaScript library for building user interfaces.
+- Tailwind CSS: A highly customizable CSS framework.
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
